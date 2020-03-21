@@ -12,7 +12,7 @@ body{
 	font-size:150px;
 	height:20vw;
 	margin-bottom:2vh;
-	margin-top:4vh;
+	margin-top:3vh;
 	text-shadow:4px 4px 8px #888;
 	width:20vw;
 }
@@ -31,4 +31,14 @@ body{
 	overflow:scroll;
 	margin-top:3vh;
 	scroll-snap-type:y mandatory;
+}
+.title{
+	box-shadow:0 0 40px #888;
+	font-size:95px;
+	font-family:Josefin Sans;
+	padding:3vh 4vw 1vh 4vw;
+	position:relative;
+	text-align:left;
+	top:-100px;
+	width:82vw;
 }

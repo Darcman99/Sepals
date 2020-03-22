@@ -1,12 +1,13 @@
 function addTab(){
-	var randomHex1=Math.floor(Math.random()*15);
-	var randomHex2=Math.floor(Math.random()*15);
-	var randomHex3=Math.floor(Math.random()*15);
+	var randomHex1=Math.floor(Math.random()*8);
+	var randomHex2=Math.floor(Math.random()*8);
+	var randomHex3=Math.floor(Math.random()*8);
 	var randomColour="#"+convertToHex(randomHex1)+convertToHex(randomHex2)+convertToHex(randomHex3);
 	var newTab=document.createElement("div");
 	newTab.setAttribute("class","tab");
 	newTab.setAttribute("style","box-shadow:0px 0px 40px #000,inset 0px 0px 100px "+randomColour);
-	var addTab=document.querySelector('.add');
+	newTab.innerHTML=`<p class="title">Placeholder</p>`;
+	var addTab=document.querySelector("#ghost");
 	addTab.parentNode.insertBefore(newTab,addTab);
 }
 function convertToHex(hex16){

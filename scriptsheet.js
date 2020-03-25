@@ -7,7 +7,7 @@ function addProduct(){
 		var randomColour=`#`+convertToHex(randomHex1)+convertToHex(randomHex2)+convertToHex(randomHex3);
 		var newProduct=document.createElement(`div`);
 		newProduct.setAttribute(`class`,`product1`);
-		newProduct.setAttribute(`style`,`box-shadow:0px 0px 40px #000,inset 0px 0px 100px;`+randomColour);
+		newProduct.setAttribute(`style`,`box-shadow:0px 0px 40px #000,inset 0px 0px 100px`+randomColour);
 		newProduct.innerHTML=`
 			<table class="product2">
 				<tr>

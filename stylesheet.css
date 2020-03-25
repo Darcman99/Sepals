@@ -22,16 +22,29 @@ body{
 	background-color:#fff;
 	display:inline-block;
 	margin:.8vh 0 .8vh 0;
+	text-align:center;
 	width:95vw;
 	z-index:0;
 }
-.title{
-	font-size:60px;
-	left:20px;
-	position:relative;
+.productFloating{
+	color:#aaa;
+	font-size:54px;
+	padding:0 0 0 6vw;
 	text-align:left;
-	text-decoration:underline;
-	top:-30px;
-	width:88vw;
+	width:12vw;
+}
+.productName{
+	font-size:60px;
+	text-align:left;
 	z-index:1;
+}
+.productTotal{
+	color:#aaa;
+	font-size:54px;
+	padding:0 0 0 6vw;
+	text-align:left;
+}
+.product{
+	margin:1vh 0 1vh 4vw;
+	width:90vw;
 }

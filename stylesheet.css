@@ -6,7 +6,7 @@ body{
 	overscroll-behavior:none;
 	text-align:center;
 }
-.add{
+.addProduct{
 	background-color:#fff;
 	box-shadow:0px 0px 40px #000,inset 0px 0px 100px #000;
 	color:#666;
@@ -18,16 +18,8 @@ body{
 	width:100.1vw;
 	z-index:2;
 }
-.tab{
-	background-color:#fff;
-	display:inline-block;
-	margin:.8vh 0 .8vh 0;
-	text-align:center;
-	width:95vw;
-	z-index:0;
-}
 .productFloating{
-	color:#aaa;
+	color:#888;
 	font-size:54px;
 	padding:0 0 0 6vw;
 	text-align:left;
@@ -39,12 +31,20 @@ body{
 	z-index:1;
 }
 .productTotal{
-	color:#aaa;
+	color:#888;
 	font-size:54px;
 	padding:0 0 0 6vw;
 	text-align:left;
 }
-.product{
+.product1{
+	background-color:#fff;
+	display:inline-block;
+	margin:.8vh 0 .8vh 0;
+	text-align:center;
+	width:95vw;
+	z-index:0;
+}
+.product2{
 	margin:1vh 0 1vh 4vw;
 	width:90vw;
 }

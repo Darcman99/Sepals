@@ -1,4 +1,4 @@
-function addTab(){
+function addProduct(){
 	var productTitle=prompt(`What is the new product?`);
 	if(productTitle){
 		var randomHex1=Math.floor(Math.random()*8);
@@ -6,10 +6,10 @@ function addTab(){
 		var randomHex3=Math.floor(Math.random()*8);
 		var randomColour=`#`+convertToHex(randomHex1)+convertToHex(randomHex2)+convertToHex(randomHex3);
 		var newProduct=document.createElement(`div`);
-		newProduct.setAttribute(`class`,`tab`);
+		newProduct.setAttribute(`class`,`product1`);
 		newProduct.setAttribute(`style`,`box-shadow:0px 0px 40px #000,inset 0px 0px 100px;`+randomColour);
 		newProduct.innerHTML=`
-			<table class="product">
+			<table class="product2">
 				<tr>
 					<td class="productName" colspan="2">
 						`+productTitle+`
@@ -25,8 +25,8 @@ function addTab(){
 				</tr>
 			</table>
 		`;
-		var addProduct=document.querySelector(`#ghost`);
-		addProduct.parentNode.insertBefore(newProduct,addProduct);
+		var ghost=document.querySelector(`#ghost`);
+		ghost.parentNode.insertBefore(newProduct,ghost);
 	}
 }
 function convertToHex(hex16){

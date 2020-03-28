@@ -1,18 +1,23 @@
 function addProduct(){
 	var productTitle=prompt(`What is the new product?`);
 	if(productTitle){
-		var randomHex1=Math.floor(Math.random()*8);
-		var randomHex2=Math.floor(Math.random()*8);
-		var randomHex3=Math.floor(Math.random()*8);
+		var randomHex1=Math.floor(Math.random()*6);
+		var randomHex2=Math.floor(Math.random()*6);
+		var randomHex3=Math.floor(Math.random()*6);
 		var randomColour=`#`+convertToHex(randomHex1)+convertToHex(randomHex2)+convertToHex(randomHex3);
 		var newProduct=document.createElement(`div`);
-		newProduct.setAttribute(`class`,`product1`);
+		newProduct.setAttribute(`class`,`productContainer`);
 		newProduct.setAttribute(`style`,`box-shadow:0px 0px 40px #000,inset 0px 0px 100px`+randomColour);
 		newProduct.innerHTML=`
-			<table class="product2">
+			<table class="productContent">
 				<tr>
 					<td class="productName" colspan="2">
 						`+productTitle+`
+					</td>
+					<td rowspan=2 width="6vh">
+						<div class="productEntry">
+							+
+						</div>
 					</td>
 				</tr>
 				<tr>

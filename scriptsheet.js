@@ -1,3 +1,4 @@
+var affixIdentifier=1;
 function addProduct(){
 	var productTitle=prompt(`What is the new product?`);
 	if(productTitle){
@@ -9,22 +10,17 @@ function addProduct(){
 		newProduct.setAttribute(`class`,`productContainer`);
 		newProduct.setAttribute(`style`,`box-shadow:0px 0px 40px #000,inset 0px 0px 100px`+randomColour);
 		newProduct.innerHTML=`
-			<table class="productContent">
+			<table class="productContent" onclick="enterProduct(`+affixIdentifier+`)">
 				<tr>
 					<td class="productName" colspan="2">
 						`+productTitle+`
 					</td>
-					<td rowspan=2 width="6vh">
-						<div class="productEntry">
-							+
-						</div>
-					</td>
 				</tr>
 				<tr>
-					<td class="productFloating">
+					<td class="productToEnter" id="productToEnter`+affixIdentifier+`">
 						0
 					</td>
-					<td class="productTotal">
+					<td class="productTotal" id="productTotal`+affixIdentifier+`">
 						0
 					</td>
 				</tr>
@@ -32,6 +28,7 @@ function addProduct(){
 		`;
 		var ghost=document.querySelector(`#ghost`);
 		ghost.parentNode.insertBefore(newProduct,ghost);
+		affixIdentifier++;
 	}
 }
 function convertToHex(hex16){
@@ -54,4 +51,20 @@ function convertToHex(hex16){
 		`f`
 	];
 	return hexValues[hex16];
+}
+function enterProduct(productIdentifier){
+	var productEntry=prompt(`Enter a value to add to the total. Affix '-' to remove product from all fields. Enter only 'e' to remove product from the 'to enter' field.`);
+	if(productEntry){
+		if(productEntry==`e`){
+			var productEntered=parseInt(prompt(`Enter a value to remove it from the 'to enter' field but not the total.`))
+			document.getElementById(`productToEnter`+productIdentifier).innerHTML=parseInt(document.getElementById(`productToEnter`+productIdentifier).innerHTML)-productEntered;
+		}else{
+			productEntry=parseInt(productEntry);
+			document.getElementById(`productToEnter`+productIdentifier).innerHTML=parseInt(document.getElementById(`productToEnter`+productIdentifier).innerHTML)+productEntry;
+			document.getElementById(`productTotal`+productIdentifier).innerHTML=parseInt(document.getElementById(`productTotal`+productIdentifier).innerHTML)+productEntry;
+		}
+	}
+	if(document.getElementById(`productTotal`+productIdentifier).innerHTML<0){
+		document.getElementById(`productTotal`+productIdentifier).innerHTML=0;
+	}
 }

@@ -30,29 +30,18 @@ body{
 	margin:1vh 0 1vh 4vw;
 	width:89.3vw;
 }
-.productEntry{
-	background-color:#bbb;
-	border-radius:100%;
-	box-shadow:0px 0px 40px #333,inset 0px 0px 80px #333;
-	color:#666;
-	font-size:124px;
-	text-shadow:4px 4px 8px #888;
-	height:6vh;
-	width:6vh;
-	text-align:center;
-}
-.productFloating{
-	color:#888;
-	font-size:54px;
-	padding:0 0 0 6vw;
-	text-align:left;
-	width:12vw;
-}
 .productName{
 	color:#555;
 	font-size:60px;
 	text-align:left;
 	z-index:1;
+}
+.productToEnter{
+	color:#888;
+	font-size:54px;
+	padding:0 0 0 6vw;
+	text-align:left;
+	width:12vw;
 }
 .productTotal{
 	color:#888;
